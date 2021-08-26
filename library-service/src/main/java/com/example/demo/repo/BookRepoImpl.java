@@ -1,6 +1,9 @@
 package com.example.demo.repo;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -27,6 +30,16 @@ public class BookRepoImpl implements BookRepo{
 		entityManager.persist(book);
 	
 		return book;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	@Transactional
+	public List<Book> displayAllBooks() {
+		
+		Query query=entityManager.createQuery("SELECT B FROM Book B",Book.class);
+		
+		return query.getResultList();
 	}
 
 }
