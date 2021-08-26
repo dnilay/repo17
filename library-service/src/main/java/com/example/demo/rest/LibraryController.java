@@ -20,7 +20,7 @@ public class LibraryController {
 		this.libraryService = libraryService;
 	}
 	@PostMapping("/libraries")
-	public ResponseEntity<Library> createLibrary(@RequestBody Library library)
+	public ResponseEntity<Library> createLibrary(@RequestBody final Library library)
 	{
 		return ResponseEntity.status(HttpStatus.CREATED).body(libraryService.createLibrary(library));
 	}

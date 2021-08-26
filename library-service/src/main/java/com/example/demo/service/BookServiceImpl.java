@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.model.Book;
+import com.example.demo.model.BookEntity;
 import com.example.demo.repo.BookRepoImpl;
 @Component(value = "bookService")
 public class BookServiceImpl implements BookService{
@@ -17,15 +17,21 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public Book createBook(Book book) {
+	public BookEntity createBook(BookEntity book) {
 		// TODO Auto-generated method stub
 		return bookRepo.createBook(book);
 	}
 
 	@Override
-	public List<Book> displayAllBooks() {
+	public List<BookEntity> displayAllBooks() {
 		// TODO Auto-generated method stub
 		return bookRepo.displayAllBooks();
+	}
+
+	@Override
+	public BookEntity findBookById(Integer id) {
+		// TODO Auto-generated method stub
+		return bookRepo.findBookById(id);
 	}
 
 }

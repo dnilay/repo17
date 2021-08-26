@@ -10,14 +10,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.model.Book;
+import com.example.demo.exception.BookNotFoundException;
+import com.example.demo.model.BookEntity;
 
 @Component(value = "bookRepo")
 @EnableTransactionManagement
-public class BookRepoImpl implements BookRepo{
+public class BookRepoImpl implements BookRepo {
 
 	private EntityManager entityManager;
-	
+
 	@Autowired
 	public BookRepoImpl(EntityManager entityManager) {
 		this.entityManager = entityManager;
@@ -25,21 +26,36 @@ public class BookRepoImpl implements BookRepo{
 
 	@Override
 	@Transactional
-	public Book createBook(Book book) {
-	
+	public BookEntity createBook(BookEntity book) {
+
 		entityManager.persist(book);
-	
+
 		return book;
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	@Transactional
-	public List<Book> displayAllBooks() {
-		
-		Query query=entityManager.createQuery("SELECT B FROM Book B",Book.class);
-		
+	public List<BookEntity> displayAllBooks() {
+
+		Query query = entityManager.createQuery("SELECT B FROM BookEntity B", BookEntity.class);
+
 		return query.getResultList();
+	}
+
+	@Override
+	@Transactional
+	public BookEntity findBookById(Integer id) {
+		Query query = entityManager.createQuery("SELECT B FROM BookEntity B where B.id=:book_id", BookEntity.class);
+		query.setParameter("book_id", id);
+		@SuppressWarnings("unchecked")
+		List<BookEntity> list = query.getResultList();
+		if(list.isEmpty())
+		{
+			throw new BookNotFoundException("book with the given id not found");
+		}
+	BookEntity book = list.get(0);
+		return book;
 	}
 
 }
