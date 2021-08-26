@@ -50,11 +50,31 @@ public class BookRepoImpl implements BookRepo {
 		query.setParameter("book_id", id);
 		@SuppressWarnings("unchecked")
 		List<BookEntity> list = query.getResultList();
-		if(list.isEmpty())
-		{
+		if (list.isEmpty()) {
 			throw new BookNotFoundException("book with the given id not found");
 		}
-	BookEntity book = list.get(0);
+		BookEntity book = list.get(0);
+		return book;
+	}
+
+	@Override
+	@Transactional
+	public BookEntity updateBookById(Integer id, BookEntity bookDetail) {
+		Query query = entityManager.createQuery("SELECT B FROM BookEntity B where B.id=:book_id", BookEntity.class);
+		query.setParameter("book_id", id);
+		@SuppressWarnings("unchecked")
+		List<BookEntity> list = query.getResultList();
+		if (list.isEmpty()) {
+			throw new BookNotFoundException("book with the given id not found");
+		}
+		BookEntity book = list.get(0);
+		book.setBookName(bookDetail.getBookName());
+		book.setAuthorName(bookDetail.getAuthorName());
+		book.setBookPrice(bookDetail.getBookPrice());
+		book.setIsbn(bookDetail.getIsbn());
+		book.setPublishDate(bookDetail.getPublishDate());
+		book.setLibrary(bookDetail.getLibrary());
+		entityManager.merge(book);
 		return book;
 	}
 

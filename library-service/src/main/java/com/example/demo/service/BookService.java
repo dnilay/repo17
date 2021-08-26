@@ -8,5 +8,6 @@ public interface BookService {
 	public BookEntity createBook(BookEntity book);
 	public List<BookEntity> displayAllBooks();
 	public BookEntity findBookById(Integer id);
-
+	public BookEntity updateBookById(Integer id,BookEntity bookDetail);
+	
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.model.BookEntity;
 import com.example.demo.repo.BookRepoImpl;
@@ -32,6 +33,12 @@ public class BookServiceImpl implements BookService{
 	public BookEntity findBookById(Integer id) {
 		// TODO Auto-generated method stub
 		return bookRepo.findBookById(id);
+	}
+
+	@Override
+	public BookEntity updateBookById(Integer id, BookEntity bookDetail) {
+		
+		return bookRepo.updateBookById(id, bookDetail);
 	}
 
 }
