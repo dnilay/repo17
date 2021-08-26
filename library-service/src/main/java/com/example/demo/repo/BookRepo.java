@@ -5,9 +5,14 @@ import java.util.List;
 import com.example.demo.model.BookEntity;
 
 public interface BookRepo {
-	
+
 	public BookEntity createBook(BookEntity book);
+
 	public List<BookEntity> displayAllBooks();
+
 	public BookEntity findBookById(Integer id);
-	public BookEntity updateBookById(Integer id,BookEntity bookDetail);
+
+	public BookEntity updateBookById(Integer id, BookEntity bookDetail);
+
+	public BookEntity deleteBookById(Integer id);
 }

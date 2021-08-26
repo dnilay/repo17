@@ -9,5 +9,6 @@ public interface BookService {
 	public List<BookEntity> displayAllBooks();
 	public BookEntity findBookById(Integer id);
 	public BookEntity updateBookById(Integer id,BookEntity bookDetail);
+	public BookEntity deleteBookById(Integer id);
 	
 }

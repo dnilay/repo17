@@ -41,4 +41,10 @@ public class BookServiceImpl implements BookService{
 		return bookRepo.updateBookById(id, bookDetail);
 	}
 
+	@Override
+	public BookEntity deleteBookById(Integer id) {
+		// TODO Auto-generated method stub
+		return bookRepo.deleteBookById(id);
+	}
+
 }

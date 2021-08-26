@@ -78,4 +78,22 @@ public class BookRepoImpl implements BookRepo {
 		return book;
 	}
 
+	@Override
+	@Transactional
+	public BookEntity deleteBookById(Integer id) {
+		Query query = entityManager.createQuery("SELECT B FROM BookEntity B where B.id=:book_id", BookEntity.class);
+		query.setParameter("book_id", id);
+		@SuppressWarnings("unchecked")
+		List<BookEntity> list = query.getResultList();
+		if (list.isEmpty()) {
+			throw new BookNotFoundException("book with the given id not found");
+		}
+		BookEntity book = list.get(0);
+		query=entityManager.createQuery("DELETE FROM BookEntity  B where B.id=:book_id ");
+		query.setParameter("book_id", book.getId());
+		query.executeUpdate();
+		//entityManager.remove(book);
+		return book;
+	}
+
 }

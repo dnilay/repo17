@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -91,6 +92,16 @@ public class BookController {
 		bookResponseEntity.setLibraryId(book.getLibrary().getId());
 		return ResponseEntity.status(HttpStatus.ACCEPTED).body(bookResponseEntity);
 
+	}
+	@DeleteMapping("/books/{id}")
+	public ResponseEntity<StringBuffer> deleteById(@PathVariable("id") Integer id)
+	{
+		BookEntity entity=bookService.deleteBookById(id);
+		StringBuffer stringBuffer=new StringBuffer();
+		stringBuffer.append("deletion successfull");
+		stringBuffer.append("with bookId: "+entity.getId());
+		return ResponseEntity.status(HttpStatus.OK).body(stringBuffer);
+		
 	}
 
 }
