@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.MovieRepository;
 import com.example.demo.dto.MovieDto;
+import com.example.demo.exception.MovieNotFoundException;
 import com.example.demo.model.MovieEntity;
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -45,5 +46,18 @@ public class MovieServiceImpl implements MovieService {
 		}
 		return dtos;
 	}
+
+	@Override
+	public MovieDto getMovieByMovieId(String id) throws MovieNotFoundException {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		MovieEntity entity=movieRepository.findByMovieId(id);
+		if(entity==null)
+		{
+			throw new MovieNotFoundException("movie with the given id not found");
+		}
+		return modelMapper.map(entity, MovieDto.class);
+	}
+
+
 
 }

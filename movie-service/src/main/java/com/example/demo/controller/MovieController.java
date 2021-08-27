@@ -11,12 +11,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.MovieDto;
+import com.example.demo.exception.MovieNotFoundException;
 import com.example.demo.service.MovieService;
 import com.example.demo.ui.MovieRequestEntity;
 import com.example.demo.ui.MovieResponseEntity;
@@ -49,18 +51,25 @@ public class MovieController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(tempDto, MovieResponseEntity.class));
 
 	}
-	@GetMapping(value="/movies",produces = {"application/json"})
-	public ResponseEntity<List<MovieResponseEntity>> displayAllMovies()
-	{
-		List<MovieDto> list=movieService.displayAllMovies();
-		List<MovieResponseEntity> responses=new ArrayList<MovieResponseEntity>();
+
+	@GetMapping(value = "/movies", produces = { "application/json" })
+	public ResponseEntity<List<MovieResponseEntity>> displayAllMovies() {
+		List<MovieDto> list = movieService.displayAllMovies();
+		List<MovieResponseEntity> responses = new ArrayList<MovieResponseEntity>();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-		for(MovieDto dto:list)
-		{
+		for (MovieDto dto : list) {
 			responses.add(modelMapper.map(dto, MovieResponseEntity.class));
 		}
-		
-		return new ResponseEntity<List<MovieResponseEntity>>(responses,HttpStatus.OK);
+
+		return new ResponseEntity<List<MovieResponseEntity>>(responses, HttpStatus.OK);
+	}
+
+	@GetMapping("/movies/{movieId}")
+	public ResponseEntity<MovieResponseEntity> findMovieByMovieId(@PathVariable("movieId") String movieId) throws MovieNotFoundException {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		MovieDto dto = movieService.getMovieByMovieId(movieId);
+		return ResponseEntity.ok(modelMapper.map(dto, MovieResponseEntity.class));
+
 	}
 
 }

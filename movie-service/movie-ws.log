@@ -149,3 +149,229 @@
 2021-08-27 12:38:04.033  INFO 15021 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-08-27 12:38:04.034  INFO 15021 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-08-27 12:38:04.036  INFO 15021 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-08-27 12:42:56.094  INFO 15021 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-08-27 12:42:56.142  INFO 15021 --- [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 12:42:56.144  INFO 15021 --- [RMI TCP Connection(14)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-27 12:42:56.361  WARN 15021 --- [RMI TCP Connection(14)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-08-27 12:42:56.365  INFO 15021 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-27 12:42:56.375  INFO 15021 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-27 14:50:30.943  INFO 18381 --- [restartedMain] c.example.demo.MovieServiceApplication   : Starting MovieServiceApplication using Java 11.0.11 on nilay-ThinkPad-L560 with PID 18381 (/home/nilay/eclipse-workspace/movie-service/target/classes started by nilay in /home/nilay/eclipse-workspace/movie-service)
+2021-08-27 14:50:30.946  INFO 18381 --- [restartedMain] c.example.demo.MovieServiceApplication   : No active profile set, falling back to default profiles: default
+2021-08-27 14:50:31.001  INFO 18381 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-27 14:50:31.002  INFO 18381 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-27 14:50:32.136  INFO 18381 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 14:50:32.189  INFO 18381 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+2021-08-27 14:50:32.763  INFO 18381 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3000 (http)
+2021-08-27 14:50:32.773  INFO 18381 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-27 14:50:32.774  INFO 18381 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 14:50:32.856  INFO 18381 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-27 14:50:32.856  INFO 18381 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1854 ms
+2021-08-27 14:50:32.967  INFO 18381 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-27 14:50:33.174  INFO 18381 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-27 14:50:33.185  INFO 18381 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-08-27 14:50:33.349  INFO 18381 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 14:50:33.400  INFO 18381 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-27 14:50:33.528  INFO 18381 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 14:50:33.650  INFO 18381 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-27 14:50:34.249  INFO 18381 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 14:50:34.257  INFO 18381 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:50:34.689  WARN 18381 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-27 14:50:35.256  INFO 18381 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-27 14:50:35.264  INFO 18381 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-08-27 14:50:35.315  INFO 18381 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3000 (http) with context path ''
+2021-08-27 14:50:35.335  INFO 18381 --- [restartedMain] c.example.demo.MovieServiceApplication   : Started MovieServiceApplication in 4.851 seconds (JVM running for 5.722)
+2021-08-27 14:50:36.607  INFO 18381 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-27 14:50:36.607  INFO 18381 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-27 14:50:36.609  INFO 18381 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-08-27 14:52:43.241 ERROR 18381 --- [http-nio-3000-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: source cannot be null] with root cause
+
+java.lang.IllegalArgumentException: source cannot be null
+	at org.modelmapper.internal.util.Assert.notNull(Assert.java:53) ~[modelmapper-2.4.4.jar:na]
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:404) ~[modelmapper-2.4.4.jar:na]
+	at com.example.demo.service.MovieServiceImpl.getMovieByMovieId(MovieServiceImpl.java:53) ~[classes/:na]
+	at com.example.demo.controller.MovieController.findMovieByMovieId(MovieController.java:69) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2021-08-27 14:52:57.217  INFO 18381 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-08-27 14:52:57.251  INFO 18381 --- [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 14:52:57.252  INFO 18381 --- [RMI TCP Connection(12)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-27 14:52:57.474  WARN 18381 --- [RMI TCP Connection(12)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-08-27 14:52:57.485  INFO 18381 --- [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-27 14:52:57.503  INFO 18381 --- [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-27 15:05:04.071  INFO 19546 --- [restartedMain] c.example.demo.MovieServiceApplication   : Starting MovieServiceApplication using Java 11.0.11 on nilay-ThinkPad-L560 with PID 19546 (/home/nilay/eclipse-workspace/movie-service/target/classes started by nilay in /home/nilay/eclipse-workspace/movie-service)
+2021-08-27 15:05:04.074  INFO 19546 --- [restartedMain] c.example.demo.MovieServiceApplication   : No active profile set, falling back to default profiles: default
+2021-08-27 15:05:04.131  INFO 19546 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-27 15:05:04.132  INFO 19546 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-27 15:05:05.336  INFO 19546 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 15:05:05.396  INFO 19546 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interfaces.
+2021-08-27 15:05:06.077  INFO 19546 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3000 (http)
+2021-08-27 15:05:06.086  INFO 19546 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-27 15:05:06.087  INFO 19546 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 15:05:06.152  INFO 19546 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-27 15:05:06.152  INFO 19546 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2019 ms
+2021-08-27 15:05:06.264  INFO 19546 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-27 15:05:06.436  INFO 19546 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-27 15:05:06.444  INFO 19546 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-08-27 15:05:06.608  INFO 19546 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 15:05:06.654  INFO 19546 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-27 15:05:06.776  INFO 19546 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 15:05:06.898  INFO 19546 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-27 15:05:07.603  INFO 19546 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 15:05:07.613  INFO 19546 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:05:08.128  WARN 19546 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-27 15:05:08.827  INFO 19546 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-27 15:05:08.838  INFO 19546 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-08-27 15:05:08.902  INFO 19546 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3000 (http) with context path ''
+2021-08-27 15:05:08.924  INFO 19546 --- [restartedMain] c.example.demo.MovieServiceApplication   : Started MovieServiceApplication in 5.331 seconds (JVM running for 6.25)
+2021-08-27 15:05:11.880  INFO 19546 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-27 15:05:11.881  INFO 19546 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-27 15:05:11.882  INFO 19546 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-27 15:06:01.571  WARN 19546 --- [http-nio-3000-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IllegalStateException: Invocation failure
+Controller [com.example.demo.controller.MovieController]
+Method [public org.springframework.http.ResponseEntity<com.example.demo.ui.MovieResponseEntity> com.example.demo.controller.MovieController.findMovieByMovieId(java.lang.String) throws com.example.demo.exception.MovieNotFoundException] with argument values:
+ [0] [type=java.lang.String] [value=5e8e5c0a-f6b9-4abf-b60e-468afdecede] ]
+2021-08-27 15:06:47.473  INFO 19546 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:06:47.474  INFO 19546 --- [Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-27 15:06:47.696  WARN 19546 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-08-27 15:06:47.698  INFO 19546 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-27 15:06:47.711  INFO 19546 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-27 15:06:47.906  INFO 19546 --- [restartedMain] c.example.demo.MovieServiceApplication   : Starting MovieServiceApplication using Java 11.0.11 on nilay-ThinkPad-L560 with PID 19546 (/home/nilay/eclipse-workspace/movie-service/target/classes started by nilay in /home/nilay/eclipse-workspace/movie-service)
+2021-08-27 15:06:47.907  INFO 19546 --- [restartedMain] c.example.demo.MovieServiceApplication   : No active profile set, falling back to default profiles: default
+2021-08-27 15:06:48.330  INFO 19546 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 15:06:48.341  INFO 19546 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2021-08-27 15:06:48.500  INFO 19546 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3000 (http)
+2021-08-27 15:06:48.502  INFO 19546 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-27 15:06:48.502  INFO 19546 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 15:06:48.516  INFO 19546 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-27 15:06:48.516  INFO 19546 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 606 ms
+2021-08-27 15:06:48.558  INFO 19546 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-08-27 15:06:48.561  INFO 19546 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-08-27 15:06:48.561  INFO 19546 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-08-27 15:06:48.612  INFO 19546 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 15:06:48.619  INFO 19546 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-27 15:06:48.677  INFO 19546 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 15:06:48.678  INFO 19546 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:06:48.787  WARN 19546 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-27 15:06:49.012  INFO 19546 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-27 15:06:49.018  INFO 19546 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-08-27 15:06:49.042  INFO 19546 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3000 (http) with context path ''
+2021-08-27 15:06:49.068  INFO 19546 --- [restartedMain] c.example.demo.MovieServiceApplication   : Started MovieServiceApplication in 1.219 seconds (JVM running for 106.395)
+2021-08-27 15:06:49.093  INFO 19546 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-08-27 15:06:55.830  INFO 19546 --- [http-nio-3000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-27 15:06:55.832  INFO 19546 --- [http-nio-3000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-27 15:06:55.833  INFO 19546 --- [http-nio-3000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-08-27 15:06:55.853  WARN 19546 --- [http-nio-3000-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.demo.exception.MovieNotFoundException: movie with the given id not found]
+2021-08-27 15:07:08.274  WARN 19546 --- [http-nio-3000-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.demo.exception.MovieNotFoundException: movie with the given id not found]
+2021-08-27 15:07:48.205  INFO 19546 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-08-27 15:07:48.233  INFO 19546 --- [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:07:48.233  INFO 19546 --- [RMI TCP Connection(14)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-27 15:07:48.448  WARN 19546 --- [RMI TCP Connection(14)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-08-27 15:07:48.449  INFO 19546 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-08-27 15:07:48.452  INFO 19546 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-08-27 15:09:44.694  INFO 20035 --- [restartedMain] c.example.demo.MovieServiceApplication   : Starting MovieServiceApplication using Java 11.0.11 on nilay-ThinkPad-L560 with PID 20035 (/home/nilay/eclipse-workspace/movie-service/target/classes started by nilay in /home/nilay/eclipse-workspace/movie-service)
+2021-08-27 15:09:44.711  INFO 20035 --- [restartedMain] c.example.demo.MovieServiceApplication   : No active profile set, falling back to default profiles: default
+2021-08-27 15:09:44.806  INFO 20035 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-27 15:09:44.807  INFO 20035 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-27 15:09:46.487  INFO 20035 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-27 15:09:46.545  INFO 20035 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2021-08-27 15:09:47.211  INFO 20035 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3000 (http)
+2021-08-27 15:09:47.221  INFO 20035 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-27 15:09:47.222  INFO 20035 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-08-27 15:09:47.315  INFO 20035 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-27 15:09:47.315  INFO 20035 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2506 ms
+2021-08-27 15:09:47.438  INFO 20035 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-27 15:09:47.641  INFO 20035 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-27 15:09:47.648  INFO 20035 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2021-08-27 15:09:47.817  INFO 20035 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-27 15:09:47.866  INFO 20035 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-08-27 15:09:48.029  INFO 20035 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-27 15:09:48.146  INFO 20035 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-27 15:09:48.778  INFO 20035 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-27 15:09:48.789  INFO 20035 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-27 15:09:49.575  WARN 20035 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-27 15:09:49.850  INFO 20035 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-08-27 15:09:49.950  INFO 20035 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-27 15:09:50.123  INFO 20035 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-27 15:09:50.421  INFO 20035 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3000 (http) with context path ''
+2021-08-27 15:09:50.422  INFO 20035 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-27 15:09:50.451  INFO 20035 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-27 15:09:50.566  INFO 20035 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-27 15:09:50.882  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-08-27 15:09:50.888  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingDELETE_1
+2021-08-27 15:09:50.890  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-08-27 15:09:50.894  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2021-08-27 15:09:50.898  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_4
+2021-08-27 15:09:50.902  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_5
+2021-08-27 15:09:50.906  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_6
+2021-08-27 15:09:50.909  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_7
+2021-08-27 15:09:50.912  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_8
+2021-08-27 15:09:50.915  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_9
+2021-08-27 15:09:50.919  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_10
+2021-08-27 15:09:50.923  INFO 20035 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-27 15:09:50.924  INFO 20035 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-27 15:09:50.925  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_11
+2021-08-27 15:09:50.927  INFO 20035 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-08-27 15:09:50.929  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_12
+2021-08-27 15:09:50.934  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_13
+2021-08-27 15:09:50.938  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_14
+2021-08-27 15:09:50.942  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_15
+2021-08-27 15:09:50.945  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_16
+2021-08-27 15:09:50.951  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_17
+2021-08-27 15:09:50.954  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_18
+2021-08-27 15:09:50.958  INFO 20035 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_19
+2021-08-27 15:09:51.012  INFO 20035 --- [restartedMain] c.example.demo.MovieServiceApplication   : Started MovieServiceApplication in 6.886 seconds (JVM running for 8.013)
+2021-08-27 15:09:58.518  WARN 20035 --- [http-nio-3000-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.demo.exception.MovieNotFoundException: movie with the given id not found]
+2021-08-27 15:11:35.307  WARN 20035 --- [http-nio-3000-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.demo.exception.MovieNotFoundException: movie with the given id not found]
