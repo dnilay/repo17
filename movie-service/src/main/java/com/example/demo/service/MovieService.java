@@ -8,6 +8,11 @@ import com.example.demo.exception.MovieNotFoundException;
 public interface MovieService {
 
 	public MovieDto createMovie(MovieDto movieDto);
+
 	public List<MovieDto> displayAllMovies();
+
 	public MovieDto getMovieByMovieId(String id) throws MovieNotFoundException;
+
+	public MovieDto updateMovieByMovieId(String movieId, MovieDto movieRequestEntity) throws MovieNotFoundException;
+	public void deleteMovieByMivieId(String movieId)throws MovieNotFoundException;
 }

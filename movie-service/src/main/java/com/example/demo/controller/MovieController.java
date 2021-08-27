@@ -10,9 +10,11 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -71,5 +73,21 @@ public class MovieController {
 		return ResponseEntity.ok(modelMapper.map(dto, MovieResponseEntity.class));
 
 	}
+	
+	@PutMapping("/movies/{movieId}")
+	public ResponseEntity<MovieResponseEntity> updateMovieByMovieId(@PathVariable("movieId") String movieid,@RequestBody MovieRequestEntity movieRequestEntity)
+	{
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		MovieDto dto=movieService.updateMovieByMovieId(movieid, modelMapper.map(movieRequestEntity, MovieDto.class));
+		return ResponseEntity.status(HttpStatus.OK).body(modelMapper.map(dto, MovieResponseEntity.class));
+	}
+	
+	@DeleteMapping("/movies/{movieId}")
+	public ResponseEntity<String> deleteMovieByMovieId(@PathVariable("movieId") String movieId)
+	{
+		movieService.deleteMovieByMivieId(movieId);
+		return ResponseEntity.status(HttpStatus.OK).body("deletion sucessfull");
+	}
+	
 
 }

@@ -10,4 +10,6 @@ public interface MovieRepository extends JpaRepository<MovieEntity, Integer> {
 
 	@Query
 	public MovieEntity findByMovieId(String movieId);
+	
+	
 }
