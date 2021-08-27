@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
@@ -8,6 +10,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,6 +48,19 @@ public class MovieController {
 		MovieDto tempDto = movieService.createMovie(movieDto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(modelMapper.map(tempDto, MovieResponseEntity.class));
 
+	}
+	@GetMapping(value="/movies",produces = {"application/json"})
+	public ResponseEntity<List<MovieResponseEntity>> displayAllMovies()
+	{
+		List<MovieDto> list=movieService.displayAllMovies();
+		List<MovieResponseEntity> responses=new ArrayList<MovieResponseEntity>();
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		for(MovieDto dto:list)
+		{
+			responses.add(modelMapper.map(dto, MovieResponseEntity.class));
+		}
+		
+		return new ResponseEntity<List<MovieResponseEntity>>(responses,HttpStatus.OK);
 	}
 
 }

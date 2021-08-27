@@ -1,5 +1,9 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +31,19 @@ public class MovieServiceImpl implements MovieService {
 		movieRepository.save(theMovie);
 		MovieDto dto=modelMapper.map(theMovie, MovieDto.class);
 		return dto;
+	}
+
+	@Override
+	public List<MovieDto> displayAllMovies() {
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		List<MovieDto> dtos=new ArrayList<MovieDto>();
+		List<MovieEntity> movies=movieRepository.findAll();
+		Iterator<MovieEntity> iterator=movies.iterator();
+		while(iterator.hasNext())
+		{
+			dtos.add(modelMapper.map(iterator.next(), MovieDto.class));
+		}
+		return dtos;
 	}
 
 }
