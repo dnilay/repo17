@@ -1,0 +1,5 @@
+com\example\productservice\controllers\ProductRestController.class
+com\example\productservice\model\Product.class
+com\example\productservice\repos\ProductRepo.class
+com\example\productservice\ProductServiceApplication.class
+com\example\productservice\dto\Coupon.class

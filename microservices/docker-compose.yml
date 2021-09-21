@@ -1,0 +1,36 @@
+version: '3'
+services:
+    product-app:
+        container_name: product-app
+        image: dnilay/productservice
+        restart: on-failure
+        ports: 
+            - 10666:9090
+        environment: 
+            WAIT_HOSTS: mysql:3306
+        depends_on: 
+            - docker-mysql 
+            - coupon-app
+    coupon-app:
+        container_name: coupon-app
+        image: dnilay/couponservice
+        restart: on-failure
+        ports: 
+            - 10555:9091
+        environment: 
+            WAIT_HOSTS: mysql:3306
+        depends_on: 
+            - docker-mysql
+    docker-mysql:
+        container_name: docker-mysql
+        image: mysql
+        restart: always
+        environment: 
+            MYSQL_DATABASE: mydb
+            MYSQL_ROOT_PASSWORD: test1234
+            MYSQL_ROOT_HOST: '%'
+        
+        ports:
+            - 6666:3306
+       
+        
