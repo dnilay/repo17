@@ -1,0 +1,46 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8010/eureka
+logging:
+    file:
+        name: customer-producer.log
+server:
+    port: 9091
+spring:
+    activemq:
+        broker-url: tcp://localhost:6616
+        password: admin
+        user: admin
+    application:
+        name: customer-producer-ws
+    devtools:
+        restart:
+            enabled: true
+    sleuth:
+        sampler:
+            probability: 1
+    zipkin:
+        base-url: http://localhost:9411
+        sender:
+            type: web
+
+resilience4j:
+    circuitbreaker:
+        configs:
+            default:
+                registerHealthIndicator: true
+                slidingWindowSize: 10
+                minimumNumberOfCalls: 5
+                permittedNumberOfCallsInHalfOpenState: 3
+                automaticTransitionFromOpenToHalfOpenEnabled: true
+                waitDurationInOpenState: 5s
+                failureRateThreshold: 50
+                eventConsumerBufferSize: 10
+                recordExceptions:
+                    - org.springframework.web.client.HttpServerErrorException
+                    - java.util.concurrent.TimeoutException
+                    - java.io.IOException
+        instances:
+            mainService:
+                baseConfig: default
